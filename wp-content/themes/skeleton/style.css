@@ -1,0 +1,240 @@
+/*
+Theme Name: Theming Toolbox
+Theme URI: http://040.se
+Description: A starting theme skeleton and utilities for theming
+Version: 0.1
+Author: Linus Bohman & Linnea Olsson
+*/
+
+* {
+  -webkit-transition: all .4s ease-in-out;
+}
+
+/* BASICS ---------------- */
+body {
+  background-color: #fff;
+  font-family: 'Helvetica Neue', 'Helvetica', arial, sans-serif;
+  font-size: 14px;
+}
+
+a {
+  color: #252525;
+  text-decoration: none;
+}
+
+a:focus,
+a:hover {
+  text-decoration: underline;
+}
+
+input[type="text"],
+input[type="password"],
+textarea {
+  
+}
+
+input[type="submit"],
+button {
+  
+}
+
+[disabled] {
+  opacity: 0.7;
+}
+
+a:focus {
+  outline-color: rgb(0, 0, 0);
+  outline-color: rgba(0, 0, 0, 0.6);
+}
+
+
+/***************
+*
+* 	PP Styling 
+*
+****************/
+
+
+
+img {
+	width: 100%;
+	height: auto;
+}
+
+p {
+	color: #444;
+	line-height: 1.6;
+  font-weight: 200;
+
+}
+
+h2 {
+ font-weight: 100;
+	color: #222;
+	font-size: 3em;
+  margin-bottom: 5%;
+}
+
+
+
+/***************
+*
+* 	Header 
+*
+****************/
+
+header {
+	max-width: 800px;
+  width: 90%;
+	margin: 0 auto;
+	position: relative;
+	top: -130px;
+}
+
+img.avatar {
+	width: 100px;
+	height: 100px;
+	border: 2px solid #fff;
+	margin-right: 2%;
+  margin-top: -3%;
+  box-shadow: 0 0 5px rgba(0,0,0,0.6);
+  border-radius: 50px;
+}
+
+header h2 {
+	color: white;
+	display: inline;
+}
+
+
+/***************
+*
+* 	Content 
+*
+****************/
+
+
+article {
+  position: relative;
+  margin: 8% auto;
+  max-width: 800px; 
+  width: 100%;
+
+  display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
+  display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
+  display: -ms-flexbox;      /* TWEENER - IE 10 */
+  display: -webkit-flex;     /* NEW - Chrome */
+  display: flex;             /* NEW, Spec - Opera 12.1, Firefox 20+ */
+
+  /* flexbox, por favor */
+  display: -webkit-box;
+  -webkit-box-orient: horizontal;
+  -webkit-box-pack: center;
+  -webkit-box-align: center;
+
+  display: -moz-box;  
+  -moz-box-orient: horizontal;
+  -moz-box-pack: center;
+  -moz-box-align: center;
+
+  display: box;
+  box-orient: horizontal;
+  box-pack: center;
+  box-align: center;
+
+
+}
+
+div.main-content {
+	width: 50%;
+
+  -webkit-box-ordinal-group: 2;   /* OLD - iOS 6-, Safari 3.1-6 */
+  -moz-box-ordinal-group: 2;      /* OLD - Firefox 19- */
+  -ms-flex-order: 2;              /* TWEENER - IE 10 */
+  -webkit-order: 2;               /* NEW - Chrome */
+  order: 2;                       /* NEW, Spec - Opera 12.1, Firefox 20+ */
+}
+
+div.image {
+  -webkit-box-flex: 1;      /* OLD - iOS 6-, Safari 3.1-6 */
+  -moz-box-flex: 1;         /* OLD - Firefox 19- */
+  width: 50%;               /* For old syntax, otherwise collapses. */
+  -webkit-flex: 1;          /* Chrome */
+  -ms-flex: 1;              /* IE 10 */
+  flex: 1;                  /* NEW, Spec - Opera 12.1, Firefox 20+ */
+
+  -webkit-box-ordinal-group: 1;  
+  -moz-box-ordinal-group: 1;     
+  -ms-flex-order: 1;     
+  -webkit-order: 1;  
+  order: 1;
+
+}
+
+/* styling for both left and right container */
+.main-content, 
+.image {
+  padding:0 5%;
+}
+
+article header h2 {
+  color: #333;
+}
+
+article p {
+
+  color: #555;
+}
+
+footer {
+  text-align: center;
+  max-width: 70%;
+  margin: 5% auto;
+}
+
+footer a {
+  color: #999;
+  font-size: 3em;
+  line-height: 2em;
+  padding: 3%; 
+}
+
+footer a:hover {
+  color: #444;
+}
+
+@media (max-width: 800px) {
+  h2 {
+    font-size: 2em;
+  }
+  footer {
+    max-width: 90%;
+  }  
+  footer a {
+    font-size: 2em;
+    line-height: 2em;
+  }
+
+}
+
+@media (max-width: 600px) {
+  img.avatar {
+    width: 48px;
+    height: 48px;
+    border: 0px solid #fff;
+    margin-right: 2%;
+    margin-top: -3%;
+    box-shadow: 0 0 4px rgba(0,0,0,0.6);
+    border-radius: 24px;
+  }
+  header h2 {
+    display: inline;
+  }
+
+  div.main-content {
+    width: 70%;
+  }
+  div.image {
+    width: 30%;
+  }
+}
